@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
     int count = 0;
     int taken = 1;
     int notTaken = 0;
-    std::string inputFile = "traces/short_trace1.txt";
+    std::string inputFile = "../traces/short_trace1.txt";
     std::string outputFile = "output.txt";
 
     std::vector<std::string> address;
@@ -48,9 +48,8 @@ int main(int argc, char *argv[]) {
     BiModalTwo twoBit (address, branch);
 
     Gshare gshare (address, branch);
-    gshare.predict (3);
 
-    /*
+
     std::cout << alwaysTaken.predict() << ',' << alwaysTaken.getNumBranches() << ';' << std::endl;
     std::cout << alwaysNotTaken.predict() << ',' << alwaysNotTaken.getNumBranches() << ';' << std::endl;
 
@@ -69,7 +68,16 @@ int main(int argc, char *argv[]) {
     std::cout << twoBit.predict(512) << ',' << twoBit.getNumBranches() << "; ";
     std::cout << twoBit.predict(1024) << ',' << twoBit.getNumBranches() << "; ";
     std::cout << twoBit.predict(2048) << ',' << twoBit.getNumBranches() << ";" << std::endl;
-    */
+
+    std::cout << gshare.predict (3) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (4) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (5) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (6) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (7) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (8) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (9) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (10) << ',' << gshare.getNumBranches() << "; ";
+    std::cout << gshare.predict (11) << ',' << gshare.getNumBranches() << "; " << std::endl;
     
     /*
     for(int i = 0; i<initSize; i++) {

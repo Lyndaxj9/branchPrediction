@@ -12,12 +12,13 @@ class Gshare {
 
         std::vector<int> predictTable;
         int tableSize = 2048;
-        int ghr = 7;
+        int ghr = 0;
 
     public:
         Gshare(std::vector<std::string> addrIN, std::vector<int> actualIN);
         int predict(int historyLengthIN);
         void checkPredict(int tableModIN, int forIN);
+        void initTable();
         int getNumBranches();
 };
 
